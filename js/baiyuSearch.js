@@ -9,8 +9,8 @@ $(function () {
     var rotateDeg = 0;
     $("#refreshContainer").click(function () {
         rotateDeg = rotateDeg + 360;
-        $("#changeText").css("transform", 'rotate(' + rotateDeg + 'deg)');
-        $("#changeText").css("-webkit-transform", 'rotate(' + rotateDeg + 'deg)');
+        $("#refreshIcon").css("transform", 'rotate(' + rotateDeg + 'deg)');
+        // $("#refreshIcon").css("-webkit-transform", 'rotate(' + rotateDeg + 'deg)');
         initAdviseTags();
     });
 
