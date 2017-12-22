@@ -5,6 +5,8 @@
     var defaults = {
         firstAdviseTags: [],
         secondAdviseTags: [],
+        rotateX: false,
+        rotateY: true,
         refreshClick: function () {
         },
         tagClick: function () {
