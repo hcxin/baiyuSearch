@@ -77,6 +77,11 @@ a {
     padding-left: 15px;
 }
 
+.advise-tag-container > div {
+    margin-bottom: 10px;
+}
+
+
 .advise-tag {
     color: black;
     border: 1px solid #cecece;
