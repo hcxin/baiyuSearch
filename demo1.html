@@ -47,10 +47,18 @@
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/baiyuSearch.js"></script>
 <script>
-//    $(function () {
-////        //初始化插件
-////        $.baiyuSearch();
-//    });
+    $(function () {
+        var firstTagArrays = ["张学友","张国荣","周杰伦"];
+        var secondTagArrays = ["angela","白玉","拿铁","海棠"];
+//        //初始化插件
+        $.baiyuSearch({
+            firstAdviseTags: firstTagArrays,
+            secondAdviseTags: secondTagArrays,
+            tagClickCallBack: function (tag) {
+                console.log(tag);
+            }
+        });
+    });
 </script>
 </body>
 </html>
