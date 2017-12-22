@@ -10,7 +10,6 @@ $(function () {
     $("#refreshContainer").click(function () {
         rotateDeg = rotateDeg + 360;
         $("#refreshIcon").css("transform", 'rotate(' + rotateDeg + 'deg)');
-        // $("#refreshIcon").css("-webkit-transform", 'rotate(' + rotateDeg + 'deg)');
         initAdviseTags();
     });
 
@@ -26,6 +25,7 @@ $(function () {
     }
 
     var initAdviseTags = function () {
+        var firstTagRotateDeg = 0;
         var firstTagArrays = ["猫途","救助","送养","领养"];
         $("#first-advise-container").empty();
         $.each(shuffle(firstTagArrays), function (index, item) {
@@ -33,6 +33,8 @@ $(function () {
             $adviseTagTemplate.text(item);
             $adviseTagTemplate.mouseover(function () {
                 $(this).addClass("advise-tag-highlight");
+                firstTagRotateDeg = firstTagRotateDeg + 360;
+                $(this).css("transform", 'rotateY(' + firstTagRotateDeg + 'deg)');
             }).mouseout(function () {
                 $(this).removeClass("advise-tag-highlight");
                 $(this).addClass("advise-tag-highlight-reset");
@@ -44,15 +46,16 @@ $(function () {
             $adviseTagTemplate.show();
         });
 
-        var rotateXDeg = 0;
+        var secondTagRotateDeg = 0;
         var secondTagArrays = ["快活呀","猫的世界","世界和平"];
         $("#second-advise-container").empty();
         $.each(shuffle(secondTagArrays), function (index, item) {
             var $adviseTagTemplate =  $("#advise-tag-template").clone();
             $adviseTagTemplate.text(item);
             $adviseTagTemplate.mouseover(function () {
-
                 $(this).addClass("advise-tag-highlight");
+                secondTagRotateDeg = secondTagRotateDeg + 360;
+                $(this).css("transform", 'rotateY(' + secondTagRotateDeg + 'deg)');
             }).mouseout(function () {
                 $(this).removeClass("advise-tag-highlight");
                 $(this).addClass("advise-tag-highlight-reset");
