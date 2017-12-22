@@ -16,12 +16,12 @@
         baiyuSearch: function (options) {
             var options = $.extend(defaults, options);
             //搜索框菜单控制
-            $("#searchInput").focus(function () {
+            $(".search-input").focus(function () {
                 $("#searchMenu").show();
-            }).blur(function () {
+            });
+            $("#searchMenu").blur(function () {
                 $("#searchMenu").hide();
             });
-
 
             $("#refreshContainer").click(function () {
                 options.refreshClick(resetAdviseTags);
