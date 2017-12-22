@@ -5,58 +5,52 @@
     var defaults = {
         firstAdviseTags: [],
         secondAdviseTags: [],
-        tagClickCallBack: function () {
+        refreshClick: function () {
+        },
+        tagClick: function () {
         }
     };
     $.extend({
         baiyuSearch: function (options) {
             var options = $.extend(defaults, options);
-
-            // //回到顶部
-            // $(options.topBtn).click(function () {
-            //     $.when($('body,html').animate({
-            //         scrollTop: 0
-            //     }, defaults.topSpeed)).then(options.topCallBack());
-            // });
-            //
-            // //回到低部
-            // $(options.bottomBtn).click(function () {
-            //     $.when(
-            //         $('body,html').animate({
-            //             scrollTop: $(document).height() - $(window).height()
-            //         }, defaults.bottomSpeed)).then(options.bottomCallBack());
-            // });
-
             //搜索框菜单控制
             $("#searchInput").focus(function () {
                 $("#searchMenu").show();
             }).blur(function () {
-                //$("#searchMenu").hide();
+                $("#searchMenu").hide();
             });
 
-            var rotateDeg = 0;
+
             $("#refreshContainer").click(function () {
-                rotateDeg = rotateDeg + 360;
-                $("#refreshIcon").css("transform", 'rotate(' + rotateDeg + 'deg)');
-                resetAdviseTags();
+                options.refreshClick(resetAdviseTags);
             });
 
             function shuffle(array) {
-                var tmp, current, top =array.length;
-                if(top) while(--top){
-                    current =Math.floor(Math.random() * (top + 1));
-                    tmp =array[current];
-                    array[current] =array[top];
+                var tmp, current, top = array.length;
+                if (top) while (--top) {
+                    current = Math.floor(Math.random() * (top + 1));
+                    tmp = array[current];
+                    array[current] = array[top];
                     array[top] = tmp;
                 }
                 return array;
             }
 
-            var resetAdviseTags = function () {
+            var rotateDeg = 0;
+            var resetAdviseTags = function (firstAdviseTags, secondAdviseTags) {
+                if (firstAdviseTags && firstAdviseTags.length > 0) {
+                    options.firstAdviseTags = firstAdviseTags;
+                }
+                if (secondAdviseTags && secondAdviseTags.length > 0) {
+                    options.secondAdviseTags = secondAdviseTags;
+                }
+
+                rotateDeg = rotateDeg + 360;
+                $("#refreshIcon").css("transform", 'rotate(' + rotateDeg + 'deg)');
                 var firstTagRotateDeg = 0;
                 $("#first-advise-container").empty();
                 $.each(options.firstAdviseTags, function (index, item) {
-                    var $adviseTagTemplate =  $("#advise-tag-template").clone();
+                    var $adviseTagTemplate = $("#advise-tag-template").clone();
                     $adviseTagTemplate.text(item);
                     $adviseTagTemplate.mouseover(function () {
                         $(this).addClass("advise-tag-highlight");
@@ -66,7 +60,7 @@
                         $(this).removeClass("advise-tag-highlight");
                         $(this).addClass("advise-tag-highlight-reset");
                     }).click(function () {
-                        console.log($(this).text());
+                        options.tagClick($(this).text());
                     });
 
                     $("#first-advise-container").append($adviseTagTemplate);
@@ -76,7 +70,7 @@
                 var secondTagRotateDeg = 0;
                 $("#second-advise-container").empty();
                 $.each(options.secondAdviseTags, function (index, item) {
-                    var $adviseTagTemplate =  $("#advise-tag-template").clone();
+                    var $adviseTagTemplate = $("#advise-tag-template").clone();
                     $adviseTagTemplate.text(item);
                     $adviseTagTemplate.mouseover(function () {
                         $(this).addClass("advise-tag-highlight");
@@ -86,7 +80,7 @@
                         $(this).removeClass("advise-tag-highlight");
                         $(this).addClass("advise-tag-highlight-reset");
                     }).click(function () {
-                        console.log($(this).text());
+                        options.tagClick($(this).text());
                     });
 
                     $("#second-advise-container").append($adviseTagTemplate);

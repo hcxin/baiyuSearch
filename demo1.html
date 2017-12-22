@@ -48,16 +48,33 @@
 <script src="js/baiyuSearch.js"></script>
 <script>
     $(function () {
-        var firstTagArrays = ["张学友","张国荣","周杰伦"];
-        var secondTagArrays = ["angela","白玉","拿铁","海棠"];
+        var firstTagArrays = ["张学友", "张国荣", "周杰伦"];
+        var secondTagArrays = ["angela", "白玉", "拿铁", "海棠"];
 //        //初始化插件
         $.baiyuSearch({
             firstAdviseTags: firstTagArrays,
             secondAdviseTags: secondTagArrays,
-            tagClickCallBack: function (tag) {
-                console.log(tag);
+            //刷新点击后触发
+            refreshClick: function (reset) {
+                console.log("refresh click !!");
+                //call your function
+                resetYourData(reset);
+            },
+            //tag点击后触发
+            tagClick: function (value) {
+                console.log("tag click !!");
+                alert(value);
             }
         });
+
+        //把你的新数据传递给插件
+        resetYourData = function (reset) {
+            var newFirstTagArrays = ["王菲", "zyk", "凤凰传奇", "白玉"];
+            var newSecondTagArrays = ["张学友", "haichen", "周杰伦"];
+            reset(newFirstTagArrays, newSecondTagArrays);
+        };
+
+
     });
 </script>
 </body>
