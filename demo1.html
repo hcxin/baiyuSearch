@@ -68,17 +68,19 @@
             -webkit-transition: -webkit-transform 0.4s ease-out;
             -moz-transition: -moz-transform 0.4s ease-out;
             transition: transform 0.4s ease-out;
-            transform:rotate(0deg);
+            transform: rotate(0deg);
         }
+
         .advise-tag-highlight {
             border: 1px solid #827e7e;
         }
-        .refresh-icon {
+
+        .refresh-icon-btn {
             font-size: 18px;
             -webkit-transition: -webkit-transform 0.4s ease-out;
             -moz-transition: -moz-transform 0.4s ease-out;
             transition: transform 0.4s ease-out;
-            transform:rotate(0deg);
+            transform: rotate(0deg);
         }
 
 
@@ -90,9 +92,12 @@
     <div style="position: relative;width: 300px; margin-left: 60%;">
         <input placeholder="搜索" class="search-input">
         <a class="icon-content" href="javascript:void(0);"><i class="iconfont icon-search"></i></a>
-        <div class="angela-wrapper" id="searchMenu" style="position: absolute; background-color: #fff;box-shadow: 0 0 8px rgba(0,0,0,.2);width: 230px;left: 0;top: 100%; border-radius: 4px;margin-top: 10px;font-size: 12px;color: black;">
-            <div style="text-align: center;margin-top: 10px;"><span style="float: left;margin-left: 10px;">热门搜索</span> <span  id="refreshContainer" style="cursor: pointer;    float: right;margin-right: 15px;">
-                                <i id="refreshIcon" class="iconfont icon-shuaxin refresh-icon"></i> <span>换一批</span></span></div>
+        <div class="angela-wrapper" id="searchMenu"
+             style="position: absolute; background-color: #fff;box-shadow: 0 0 8px rgba(0,0,0,.2);width: 230px;left: 0;top: 100%; border-radius: 4px;margin-top: 10px;font-size: 12px;color: black;">
+            <div style="text-align: center;margin-top: 10px;"><span style="float: left;margin-left: 10px;">热门搜索</span>
+                <span id="refreshContainer" style="cursor: pointer;    float: right;margin-right: 15px;">
+                                <i id="refreshIcon"
+                                   class="iconfont icon-shuaxin refresh-icon-btn"></i> <span>换一批</span></span></div>
             <div style="clear: both;margin-top: 40px;margin-bottom: 10px;color: #827e7e;padding: 5px;padding-left: 15px;">
                 <div style="margin-bottom: 10px;" id="first-advise-container">
                 </div>
@@ -107,7 +112,7 @@
 </div>
 
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<!--<script src="js/baiyuSearch.js"></script>-->
+<script src="js/baiyuSearch.js"></script>
 <script>
     $(function () {
 //        //初始化插件
