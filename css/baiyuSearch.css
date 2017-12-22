@@ -1,0 +1,112 @@
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.icon-content {
+    position: absolute;
+    top: 12px;
+    left: 185px;
+    width: 30px;
+    height: 30px !important;
+    line-height: normal !important;
+    padding: 0 !important;
+    color: #969696 !important;
+    text-align: center;
+
+}
+
+.search-menu {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+    width: 230px;
+    left: 0;
+    top: 100%;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: black;
+}
+
+.menu-notice {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.hot-label {
+    float: left;
+    margin-left: 10px;
+}
+
+.search-input {
+    height: 30px;
+    margin-top: 10px;
+    width: 200px;
+    border: 1px solid #eee;
+    padding-left: 20px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    border-radius: 1000px;
+    background-color: #eee;
+    outline: none;
+}
+
+.refresh-container {
+    cursor: pointer;
+    float: right;
+    margin-right: 15px;
+}
+
+.angela-wrapper:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 12px solid transparent;
+    border-bottom-color: #fff;
+    left: 20px;
+    bottom: 99%;
+}
+
+.advise-tag-container {
+    clear: both;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: #827e7e;
+    padding: 5px;
+    padding-left: 15px;
+}
+
+.advise-tag {
+    color: black;
+    border: 1px solid #cecece;
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 1px 5px 1px 5px;
+}
+
+.advise-tag-highlight-reset {
+    border: 1px solid #cecece;
+}
+
+.advise-tag-transform {
+    display: inline-block;
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    -moz-transition: -moz-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out;
+    transform: rotate(0deg);
+}
+
+.advise-tag-highlight {
+    border: 1px solid #827e7e;
+}
+
+.refresh-icon-btn {
+    display: inline-block;
+    font-size: 18px;
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    -moz-transition: -moz-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out;
+    transform: rotate(0deg);
+}
