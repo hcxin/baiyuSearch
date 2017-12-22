@@ -19,7 +19,7 @@
             $(".search-input").focus(function () {
                 $("#searchMenu").show();
             });
-            $("#searchMenu").onmouseout(function () {
+            $("#search-container").blur(function () {
                 $("#searchMenu").hide();
             });
 
