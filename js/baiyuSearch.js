@@ -56,8 +56,20 @@
                     $adviseTagTemplate.text(item);
                     $adviseTagTemplate.mouseover(function () {
                         $(this).addClass("advise-tag-highlight");
-                        firstTagRotateDeg = firstTagRotateDeg + 360;
-                        $(this).css("transform", 'rotateY(' + firstTagRotateDeg + 'deg)');
+                        if (options.rotateX){
+                            firstTagRotateDeg = firstTagRotateDeg + 360;
+                            $(this).css("transform", 'rotateX(' + firstTagRotateDeg + 'deg)');
+                        }
+                        if (options.rotateY){
+                            firstTagRotateDeg = firstTagRotateDeg + 360;
+                            $(this).css("transform", 'rotateY(' + firstTagRotateDeg + 'deg)');
+                        }
+
+                        if (options.rotateX && options.rotateY){
+                            firstTagRotateDeg = firstTagRotateDeg + 360;
+                            $(this).css("transform", 'rotateZ(' + firstTagRotateDeg + 'deg)');
+                        }
+
                     }).mouseout(function () {
                         $(this).removeClass("advise-tag-highlight");
                         $(this).addClass("advise-tag-highlight-reset");
@@ -76,8 +88,19 @@
                     $adviseTagTemplate.text(item);
                     $adviseTagTemplate.mouseover(function () {
                         $(this).addClass("advise-tag-highlight");
-                        secondTagRotateDeg = secondTagRotateDeg + 360;
-                        $(this).css("transform", 'rotateY(' + secondTagRotateDeg + 'deg)');
+                        if (options.rotateX){
+                            secondTagRotateDeg = secondTagRotateDeg + 360;
+                            $(this).css("transform", 'rotateX(' + secondTagRotateDeg + 'deg)');
+                        }
+                        if (options.rotateY){
+                            secondTagRotateDeg = secondTagRotateDeg + 360;
+                            $(this).css("transform", 'rotateY(' + secondTagRotateDeg + 'deg)');
+                        }
+
+                        if (options.rotateX && options.rotateY){
+                            secondTagRotateDeg = secondTagRotateDeg + 360;
+                            $(this).css("transform", 'rotateZ(' + secondTagRotateDeg + 'deg)');
+                        }
                     }).mouseout(function () {
                         $(this).removeClass("advise-tag-highlight");
                         $(this).addClass("advise-tag-highlight-reset");
