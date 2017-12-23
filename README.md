@@ -1,7 +1,10 @@
 # baiyuSearch
 ### 初衷
 
-想做个和简书一样的搜索插件。
+想做个类似简书的搜索插件。
+
+我们的插件效果图：
+![image](https://github.com/hcxin/baiyuSearch/blob/master/images/demopic.png)
 
 ### baiyuSearch.js介绍
 baiyuSearch是一个依赖jquery的仿简书的搜索插件，为增强用户体验而开发，体积极小，可配置性高。源码地址: https://github.com/hcxin/baiyuSearch
