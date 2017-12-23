@@ -4,6 +4,8 @@
 想做个类似简书的搜索插件。
 
 我们的插件效果图：
+
+
 ![image](https://github.com/hcxin/baiyuSearch/blob/master/images/demopic.png)
 
 ### baiyuSearch.js介绍
