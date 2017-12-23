@@ -6,7 +6,7 @@
 我们的插件效果图：
 
 
-![image](https://github.com/hcxin/baiyuSearch/blob/master/images/demopic.png)
+![image](https://github.com/hcxin/baiyuSearch/blob/master/images/demo.png)
 
 ### baiyuSearch.js介绍
 baiyuSearch是一个依赖jquery的仿简书的搜索插件，为增强用户体验而开发，体积极小，可配置性高。源码地址: https://github.com/hcxin/baiyuSearch
@@ -108,4 +108,7 @@ baiyuSearch是一个依赖jquery的仿简书的搜索插件，为增强用户体
     });
 ```
 
-### 其他说明
+### 有问题请联系我：
+
+
+![image](https://github.com/hcxin/baiyuSearch/blob/master/images/wx.jpg)
