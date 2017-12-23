@@ -17,6 +17,7 @@
             width: 100%;
             background-color: #ff9fae;
         }
+
         .main-container {
             background-color: #f9f3ff;
             height: 2000px;
@@ -57,8 +58,8 @@
         $.baiyuSearch({
             firstAdviseTags: firstTagArrays,
             secondAdviseTags: secondTagArrays,
-            rotateX:true,
-            rotateY:false,
+            rotateX: true,
+            rotateY: false,
             //刷新点击后触发
             refreshClick: function (reset) {
                 console.log("refresh click !!");
@@ -68,6 +69,10 @@
             //tag点击后触发
             tagClick: function (value) {
                 console.log("tag click !!");
+                alert(value);
+            },
+            searchClick: function (value) {
+                console.log("search click !!");
                 alert(value);
             }
         });

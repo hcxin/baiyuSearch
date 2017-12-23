@@ -10,6 +10,8 @@
         refreshClick: function () {
         },
         tagClick: function () {
+        },
+        searchClick: function () {
         }
     };
     $.extend({
@@ -29,12 +31,12 @@
             });
             $("#iconContent").click(function () {
                 var searchText = $("#searchInput").val();
-                alert(searchText);
+                options.searchClick(searchText);
             });
-            $('#searchInput').keydown(function(e) {
+            $('#searchInput').keydown(function (e) {
                 if (e.keyCode == 13) {
                     var searchText = $(this).val();
-                    alert(searchText);
+                    options.searchClick(searchText);
                 }
             });
             function shuffle(array) {
@@ -66,16 +68,16 @@
                     $adviseTagTemplate.text(item);
                     $adviseTagTemplate.mouseover(function () {
                         $(this).addClass("advise-tag-highlight");
-                        if (options.rotateX){
+                        if (options.rotateX) {
                             firstTagRotateDeg = firstTagRotateDeg + 360;
                             $(this).css("transform", 'rotateX(' + firstTagRotateDeg + 'deg)');
                         }
-                        if (options.rotateY){
+                        if (options.rotateY) {
                             firstTagRotateDeg = firstTagRotateDeg + 360;
                             $(this).css("transform", 'rotateY(' + firstTagRotateDeg + 'deg)');
                         }
 
-                        if (options.rotateX && options.rotateY){
+                        if (options.rotateX && options.rotateY) {
                             firstTagRotateDeg = firstTagRotateDeg + 360;
                             $(this).css("transform", 'rotateZ(' + firstTagRotateDeg + 'deg)');
                         }
@@ -98,16 +100,16 @@
                     $adviseTagTemplate.text(item);
                     $adviseTagTemplate.mouseover(function () {
                         $(this).addClass("advise-tag-highlight");
-                        if (options.rotateX){
+                        if (options.rotateX) {
                             secondTagRotateDeg = secondTagRotateDeg + 360;
                             $(this).css("transform", 'rotateX(' + secondTagRotateDeg + 'deg)');
                         }
-                        if (options.rotateY){
+                        if (options.rotateY) {
                             secondTagRotateDeg = secondTagRotateDeg + 360;
                             $(this).css("transform", 'rotateY(' + secondTagRotateDeg + 'deg)');
                         }
 
-                        if (options.rotateX && options.rotateY){
+                        if (options.rotateX && options.rotateY) {
                             secondTagRotateDeg = secondTagRotateDeg + 360;
                             $(this).css("transform", 'rotateZ(' + secondTagRotateDeg + 'deg)');
                         }
