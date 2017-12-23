@@ -27,6 +27,10 @@
             $("#refreshContainer").click(function () {
                 options.refreshClick(resetAdviseTags);
             });
+            $("#iconContent").click(function () {
+                var searchText = $("#searchInput").val();
+                alert(searchText);
+            });
 
             function shuffle(array) {
                 var tmp, current, top = array.length;
