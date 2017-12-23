@@ -31,7 +31,12 @@
                 var searchText = $("#searchInput").val();
                 alert(searchText);
             });
-
+            $('#searchInput').keydown(function(e) {
+                if (e.keyCode == 13) {
+                    var searchText = $(this).val();
+                    alert(searchText);
+                }
+            });
             function shuffle(array) {
                 var tmp, current, top = array.length;
                 if (top) while (--top) {
