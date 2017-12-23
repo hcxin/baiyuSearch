@@ -19,8 +19,9 @@
             $(".search-input").focus(function () {
                 $("#searchMenu").show();
             });
-            $("#search-container").mouseleave(function () {
+            $("#mainContainer").click(function () {
                 $("#searchMenu").hide();
+                event.stopPropagation();
             });
 
             $("#refreshContainer").click(function () {

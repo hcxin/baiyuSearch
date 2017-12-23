@@ -9,7 +9,6 @@
         body {
             margin: 0;
             padding: 0;
-            height: 2000px;
             background-color: #fff;
         }
 
@@ -18,12 +17,15 @@
             width: 100%;
             background-color: #ff9fae;
         }
+        .main-container {
+            background-color: #f9f3ff;
+            height: 2000px;
+        }
 
     </style>
 </head>
 <body>
 <div class="header-container">
-
     <div id="search-container" style="position: relative;width: 300px; margin-left: 60%;">
         <input placeholder="搜索" class="search-input">
         <a class="icon-content" href="javascript:void(0);"><i class="iconfont icon-search"></i></a>
@@ -44,6 +46,7 @@
 
 </div>
 
+<div id="mainContainer" class="main-container"></div>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/baiyuSearch.js"></script>
 <script>
