@@ -53,14 +53,14 @@ baiyuSearch是一个依赖jquery的仿简书的搜索插件，为增强用户体
 下面是js的用法
 
 ```javascript
-$(function () {
+    $(function () {
         var firstTagArrays = ["张学友", "张国荣", "周杰伦"];
         var secondTagArrays = ["angela", "白玉", "拿铁", "海棠"];
         $.baiyuSearch({
             firstAdviseTags: firstTagArrays,
             secondAdviseTags: secondTagArrays
         });
-        });
+    });
 ```
 
 下面是自定义参数的用法
